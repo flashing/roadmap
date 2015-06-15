@@ -1,4 +1,4 @@
-![shiro](C:\Users\user\Desktop\shiro.png)
+![shiro](http://7xjr9y.com1.z0.glb.clouddn.com/QQ图片20150531224043.jpg)
 
 ##shiro是什么?
 Apache Shiro is a powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management.
