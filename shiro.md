@@ -1,4 +1,5 @@
 ![shiro](C:\Users\user\Desktop\shiro.png)
+
 ##shiro是什么?
 Apache Shiro is a powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management.
 ##特色
@@ -10,8 +11,11 @@ Apache Shiro is a powerful and easy-to-use Java security framework that performs
 ***
 ##常用的用户权限模型-RBAC
 基于角色的访问控制（Role-Based Access Control）。在RBAC中，权限与角色相关联，用户通过成为适当角色的成员而得到这些角色的权限。
+
 ![RBAC](C:\Users\user\Desktop\rbac.png)
+
 某某主体 在 某某领域 有 某某权限
+
 * who(Principal) : 主体,用户,角色,组,部门
 * what(Domain) : 模块,页面,按钮
 * how(Permission) : 浏览,新增,修改,删除,可见/不可见
@@ -30,6 +34,7 @@ Apache Shiro is a powerful and easy-to-use Java security framework that performs
 
 ##shiro架构介绍
 ![framework](C:\Users\user\Desktop\framework.png)
+
 1. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后台帐户（Daemon Account）或其他类似事物。它仅仅意味着“当前跟软件交互的东西”。但考虑到大多数目的和用途，你可以把它认为是Shiro的“用户”概念。 
 Subject代表了当前用户的安全操作，SecurityManager则管理所有用户的安全操作。 
 
@@ -41,11 +46,13 @@ Shiro内置了可以连接大量安全数据源（又名目录）的Realm，如L
 
 ##认证和授权
 ![shiro basic Sequence Diagram](C:\Users\user\Desktop\shiro basic Sequence Diagram.png)
+
  
 ##配置篇
 ***
 ##数据模型
 ![db](C:\Users\user\Desktop\simpledb.png)
+
 ##引入jar包
 ```xml
 <dependency>
