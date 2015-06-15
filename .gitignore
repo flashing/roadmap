@@ -1,0 +1,258 @@
+![shiro](C:\Users\user\Desktop\shiro.png)
+##shiro是什么?
+Apache Shiro is a powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management.
+##特色
+* 认证 - 用户身份识别
+* 授权 - 访问控制
+* 密码加密 - 保护或隐藏数据防止被偷窥
+
+##原理篇
+***
+##常用的用户权限模型-RBAC
+基于角色的访问控制（Role-Based Access Control）。在RBAC中，权限与角色相关联，用户通过成为适当角色的成员而得到这些角色的权限。
+![RBAC](C:\Users\user\Desktop\rbac.png)
+某某主体 在 某某领域 有 某某权限
+* who(Principal) : 主体,用户,角色,组,部门
+* what(Domain) : 模块,页面,按钮
+* how(Permission) : 浏览,新增,修改,删除,可见/不可见
+
+##常用的权限框架优劣(与spring security比较)
+1. 简单性，Shiro 在使用上较 Spring Security 更简单，更容易理解。
+2. 灵活性，Shiro 可运行在 Web、EJB、IoC、Google App Engine 等任何应用环境，却不依赖这些环境。而 Spring Security 只能与 Spring 一起集成使用。
+3. 可插拔，Shiro 干净的 API 和设计模式使它可以方便地与许多的其它框架和应用进行集成。Shiro 可以与诸如 Spring、Grails、Wicket、Tapestry、Mule、Apache Camel、Vaadin 这类第三方框架无缝集成。Spring Security 在这方面就显得有些捉衿见肘。
+4. API易用度，shiro拥有支持权限判断的API，如hasPermission("Order:Approve"),而springsecurity仅有基于角色判断的API
+
+##权限控制具体实现方式
+* 数据模型--用户-权限关系基本维护
+* 页面内容--taglib,防止用户点击无权限的功能
+* URL--xml,防止恶意用户
+* 代码层--annotation,防止恶意用户
+
+##shiro架构介绍
+![framework](C:\Users\user\Desktop\framework.png)
+1. Subject：即“当前操作用户”。但是，在Shiro中，Subject这一概念并不仅仅指人，也可以是第三方进程、后台帐户（Daemon Account）或其他类似事物。它仅仅意味着“当前跟软件交互的东西”。但考虑到大多数目的和用途，你可以把它认为是Shiro的“用户”概念。 
+Subject代表了当前用户的安全操作，SecurityManager则管理所有用户的安全操作。 
+
+2. SecurityManager：它是Shiro框架的核心，典型的Facade模式，Shiro通过SecurityManager来管理内部组件实例，并通过它来提供安全管理的各种服务。 
+
+3. Realm： Realm充当了Shiro与应用安全数据间的“桥梁”或者“连接器”。也就是说，当对用户执行认证（登录）和授权（访问控制）验证时，Shiro会从应用配置的Realm中查找用户及其权限信息。 
+从这个意义上讲，Realm实质上是一个安全相关的DAO：它封装了数据源的连接细节，并在需要时将相关数据提供给Shiro。当配置Shiro时，你必须至少指定一个Realm，用于认证和（或）授权。配置多个Realm是可以的，但是至少需要一个。 
+Shiro内置了可以连接大量安全数据源（又名目录）的Realm，如LDAP、关系数据库（JDBC）、类似INI的文本配置资源以及属性文件等。如果缺省的Realm不能满足需求，你还可以插入代表自定义数据源的自己的Realm实现
+
+##认证和授权
+![shiro basic Sequence Diagram](C:\Users\user\Desktop\shiro basic Sequence Diagram.png)
+ 
+##配置篇
+***
+##数据模型
+![db](C:\Users\user\Desktop\simpledb.png)
+##引入jar包
+```xml
+<dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-ehcache</artifactId>
+            <version>${shiro.version}</version>
+</dependency>  
+```
+##web.xml中配置filter
+```xml
+<filter>
+    <filter-name>shiroFilter</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    <init-param>
+      <param-name>targetFilterLifecycle</param-name>
+      <param-value>true</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>shiroFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+```
+##与spring集成
+```xml
+<!-- 安全认证过滤器 -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager" />
+        <property name="loginUrl" value="${adminPath}/login" />
+        <property name="successUrl" value="${adminPath}" />
+        <property name="filters">
+            <map>
+                <entry key="authc" value-ref="formAuthenticationFilter"/>
+            </map>
+        </property>
+    </bean>  
+ ```
+##缓存配置
+```xml
+<cache name="shiro-activeSessionCache" maxElementsInMemory="100" overflowToDisk="true"
+           eternal="true" timeToLiveSeconds="0" timeToIdleSeconds="0"
+           diskPersistent="true" diskExpiryThreadIntervalSeconds="600"/>
+<cache name="org.apache.shiro.realm.text.PropertiesRealm-0-accounts"
+           maxElementsInMemory="100" eternal="true" overflowToDisk="true"/>  
+```
+##使用篇
+***
+##实现一个AuthorizingRealm
+```java
+/**
+     * 认证回调函数, 登录时调用
+     */
+    @Override
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authcToken) throws AuthenticationException {
+        UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
+        
+        if (LoginController.isValidateCodeLogin(token.getUsername(), false, false)){
+            // 判断验证码
+            Session session = SecurityUtils.getSubject().getSession();
+            String code = (String)session.getAttribute(ValidateCodeServlet.VALIDATE_CODE);
+            if (token.getCaptcha() == null || !token.getCaptcha().toUpperCase().equals(code)){
+                throw new CaptchaException("验证码错误.");
+            }
+        }
+        User user = getSystemService().getUserByLoginName(token.getUsername());
+        if (user != null) {
+            byte[] salt = Encodes.decodeHex(user.getPassword().substring(0,16));
+            return new SimpleAuthenticationInfo(new Principal(user), 
+                    user.getPassword().substring(16), ByteSource.Util.bytes(salt), getName());
+        } else {
+            return null;
+        }
+    }  
+/**
+     * 授权查询回调函数, 进行鉴权但缓存中无用户的授权信息时调用
+     */
+    @Override
+    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
+        Principal principal = (Principal) getAvailablePrincipal(principals);
+        User user = getSystemService().getUserByLoginName(principal.getLoginName());
+        if (user != null) {
+            UserUtils.putCache("user", user);
+            SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+            List<Menu> list = UserUtils.getMenuList();
+            for (Menu menu : list){
+                if (StringUtils.isNotBlank(menu.getPermission())){
+                    // 添加基于Permission的权限信息
+                    for (String permission : StringUtils.split(menu.getPermission(),",")){
+                        info.addStringPermission(permission);
+                    }
+                }
+            }
+            return info;
+        } else {
+            return null;
+        }
+    }  
+```
+##URL内容控制
+```xml
+<!--             认证过滤器anon(不需要认证)，auchc(需要认证(登录)才能使用)，user(必须存在用户，当登入操作时不做检查) -->
+        <property name="filterChainDefinitions">
+            <value>
+                /static/** = anon
+                /userfiles/** = anon
+                ${adminPath}/apilab/** = anon
+                ${adminPath}/login = authc
+                ${adminPath}/logout = logout
+                ${adminPath}/** = user
+             </value>
+        </property>
+```
+##JSP内容控制
+```html
+<shiro:hasPermission name="sys:user:edit"><input id="btnSubmit" class="btn btn-primary" type="submit" value="保 存"/> </shiro:hasPermission>
+<shiro:hasRole name="roleName1"><input id="btnSubmit" class="btn btn-primary" type="submit" value="保 存"/> </shiro:hasRole>
+<shiro:hasAnyPermissions name="sys:user:edit,sys:user:view"><input id="btnSubmit" class="btn btn-primary" type="submit" value="保 存"/> </shiro:hasAnyPermissions>
+<shiro:user><input id="btnSubmit" class="btn btn-primary" type="submit" value="保 存"/> </shiro:user>
+<shiro:guest><input id="btnSubmit" class="btn btn-primary" type="submit" value="保 存"/> </shiro:guest>  
+```
+##方法级控制
+```java
+@RequiresPermissions("sys:user:view")
+@RequiresRoles("roleName1")
+@RequiresUser
+@RequiresGuest
+@RequestMapping(value = {"list", ""})
+public String list(User user, HttpServletRequest request, HttpServletResponse response, Model model) {  
+}
+```
+##数据级别权限
+```java
+/**
+     * 数据范围过滤
+     * @param user 当前用户对象，通过“UserUtils.getUser()”获取
+     * @param officeAlias 机构表别名，例如：dc.createAlias("office", "office");
+     * @return 标准连接条件对象
+     */
+    protected static Junction dataScopeFilter(User user, String officeAlias) {
+        // 进行权限过滤，多个角色权限范围之间为或者关系。
+        List<String> dataScope = Lists.newArrayList();
+        Junction junction = Restrictions.disjunction();
+        
+        // 超级管理员，跳过权限过滤
+        if (!user.isAdmin()){
+            for (Role r : user.getRoleList()){
+                if (!dataScope.contains(r.getDataScope()) && StringUtils.isNotBlank(officeAlias)){
+                    boolean isDataScopeAll = false;
+                    if (Role.DATA_SCOPE_ALL.equals(r.getDataScope())){
+                        isDataScopeAll = true;
+                    }
+                    else if (Role.DATA_SCOPE_COMPANY_AND_CHILD.equals(r.getDataScope())){
+                        junction.add(Restrictions.eq(officeAlias+".id", user.getCompany().getId()));
+                        junction.add(Restrictions.like(officeAlias+".parentIds", user.getCompany().getParentIds()+user.getCompany().getId()+",%"));
+                    }
+                    else if (Role.DATA_SCOPE_COMPANY.equals(r.getDataScope())){
+                        junction.add(Restrictions.eq(officeAlias+".id", user.getCompany().getId()));
+                        junction.add(Restrictions.and(Restrictions.eq(officeAlias+".parent.id", user.getCompany().getId()),
+                                Restrictions.eq(officeAlias+".type", "2"))); // 包括本公司下的部门
+                    }
+                    else if (Role.DATA_SCOPE_OFFICE_AND_CHILD.equals(r.getDataScope())){
+                        junction.add(Restrictions.eq(officeAlias+".id", user.getOffice().getId()));
+                        junction.add(Restrictions.like(officeAlias+".parentIds", user.getOffice().getParentIds()+user.getOffice().getId()+",%"));
+                    }
+                    else if (Role.DATA_SCOPE_OFFICE.equals(r.getDataScope())){
+                        junction.add(Restrictions.eq(officeAlias+".id", user.getOffice().getId()));
+                    }
+                    else if (Role.DATA_SCOPE_CUSTOM.equals(r.getDataScope())){
+                        junction.add(Restrictions.in(officeAlias+".id", r.getOfficeIdList()));
+                    }
+                    //else if (Role.DATA_SCOPE_SELF.equals(r.getDataScope())){
+                    if (!isDataScopeAll){
+                        if (StringUtils.isNotBlank(userAlias)){
+                            junction.add(Restrictions.eq(userAlias+".id", user.getId()));
+                        }else {
+                            junction.add(Restrictions.isNull(officeAlias+".id"));
+                        }
+                    }else{
+                        // 如果包含全部权限，则去掉之前添加的所有条件，并跳出循环。
+                        junction = Restrictions.disjunction();
+                        break;
+                    }
+                    dataScope.add(r.getDataScope());
+                }
+            }
+        }
+        return junction;
+    }  
+```
+##单点登录
+待完善
+##参考资料
+[官方网站](http://shiro.apache.org/)
+[在 Web 项目中应用 Apache Shiro](http://www.ibm.com/developerworks/cn/java/j-lo-shiro/)
+[Apache Shiro 使用手册](http://kdboy.iteye.com/blog/1154644)
