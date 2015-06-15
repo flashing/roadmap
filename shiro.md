@@ -1,14 +1,14 @@
 ![shiro](http://7xjr9y.com1.z0.glb.clouddn.com/QQ图片20150531224043.jpg)
 
-##shiro是什么?
+#shiro是什么?
 Apache Shiro is a powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management.
 ##特色
 * 认证 - 用户身份识别
 * 授权 - 访问控制
 * 密码加密 - 保护或隐藏数据防止被偷窥
 
-##原理篇
-***
+#原理篇
+
 ##常用的用户权限模型-RBAC
 基于角色的访问控制（Role-Based Access Control）。在RBAC中，权限与角色相关联，用户通过成为适当角色的成员而得到这些角色的权限。
 
@@ -48,8 +48,8 @@ Shiro内置了可以连接大量安全数据源（又名目录）的Realm，如L
 ![shiro basic Sequence Diagram](C:\Users\user\Desktop\shiro basic Sequence Diagram.png)
 
  
-##配置篇
-***
+#配置篇
+
 ##数据模型
 ![db](C:\Users\user\Desktop\simpledb.png)
 
@@ -113,8 +113,8 @@ Shiro内置了可以连接大量安全数据源（又名目录）的Realm，如L
 <cache name="org.apache.shiro.realm.text.PropertiesRealm-0-accounts"
            maxElementsInMemory="100" eternal="true" overflowToDisk="true"/>  
 ```
-##使用篇
-***
+#使用篇
+
 ##实现一个AuthorizingRealm
 ```java
 /**
