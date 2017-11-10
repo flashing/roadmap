@@ -1,4 +1,8 @@
-# RACE Digital Strategy framework RACE数字战略框架
+---
+layout: post
+title: RACE Digital Strategy Framework
+---
+# RACE Digital Strategy Framework RACE数字战略框架
 ![RACE](http://7xjra3.com1.z0.glb.clouddn.com/digital-marketing-plan-template-smart-insights.png)
 ## 名词解释
 |名词|全拼|解释|
