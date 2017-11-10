@@ -1,7 +1,7 @@
 # RACE Digital Strategy framework RACE数字战略框架
 ## 名词解释
 |名词|全拼|解释|
-|-|-|-|-|
+|-|-|-|
 |reach||到达|
 |act||行动|
 |convert||转变|
