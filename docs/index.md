@@ -1,1 +1,5 @@
-hello world
+---
+layout: default
+title: 我的Blog
+---
++ hello world
