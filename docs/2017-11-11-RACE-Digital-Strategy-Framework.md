@@ -1,35 +1,44 @@
 # RACE Digital Strategy Framework RACE数字营销战略框架
 ![RACE](http://7xjra3.com1.z0.glb.clouddn.com/digital-marketing-plan-template-smart-insights.png?imageView2/0/format/webp/q/75|imageslim)
 建立敏捷的数字营销战略方法，制定详细的数字营销计划，为每个主要市场/命题定义数字渠道战略，为未来提供重点和方向。
+
 确保数字计划与所有市场营销沟通良好结合，并与业务目标保持一致。
+
 ## 名词解释
-|名词|全拼|解释|
-|-|-|-|
-|reach||到达|
-|act||行动|
-|convert||转变|
-|engage||参与|
+
+名词|全拼|解释
+-|-|-
+reach||到达
+act||行动
+convert||转变
+engage||参与
 
 ## PLAN 计划
-  创建一个数字营销策略
-+ RECOMMENDATION 建议
 
-制定计划来定义机会，战略和行动。  
-如果对RACE客户生命周期的每个部分都有SMART目标，那么数字营销计划将更加可信。  
-使用汇总表清晰的链接战略，关键绩效指标和行动。  
-交付成果如数字营销计划。  
+创建一个数字营销策略
 
-+ OPPORTUNITY 机遇
+### RECOMMENDATION 建议
 
-审查市场和设定目标。  
+制定计划来定义机会，战略和行动。
+
+如果对RACE客户生命周期的每个部分都有SMART目标，那么数字营销计划将更加可信。
+
+使用汇总表清晰的链接战略，关键绩效指标和行动。
+
+交付成果如数字营销计划。
+
+### OPPORTUNITY 机遇
+
+审查市场和设定目标。
+
 从以下关键活动开始，通过市场分析来确定digital opportunity数位机会：
-  + 评审当前digital marketing capabilities数字营销能力
-  + 使用KPI dashboards关键绩效指标仪表盘为业务定制分析
-  + 总结客户的customer personas客户角色和customer journey map(CJM)客户旅程地图
-  + 审核品牌和competitor benchmarking竞争标杆管理
-  + 审查influencer outreach影响外展，co-marketing合作营销和intermediaries营销中介
-  + SLEPT因素评审
-  + 通过转换电子表格模型来定义机会，定义SMART objectivesSMART目标
+* 评审当前digital marketing capabilities数字营销能力
+* 使用KPI dashboards关键绩效指标仪表盘为业务定制分析
+* 总结客户的customer personas客户角色和customer journey map(CJM)客户旅程地图
+* 审核品牌和competitor benchmarking竞争标杆管理
+* 审查influencer outreach影响外展，co-marketing合作营销和intermediaries营销中介
+* SLEPT因素评审
+* 通过转换电子表格模型来定义机会，定义SMART objectivesSMART目标
  
 + STRATEGY 策略
 
