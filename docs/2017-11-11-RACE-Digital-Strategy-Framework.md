@@ -53,6 +53,48 @@
 
 ## REACH 到达
 增加线上受众群体
+客户参与过程的这个初始阶段就是潜在客户进行研究和探索他们的选择的地方。主要目标应该是发布高质量的内容，并使用有效的直销技术来提高对品牌，产品和服务的认知度。
++ KPIs
+  + Analog marketing 模拟营销
+    + Advertising 广告
+      + Impressions 收视次数
+      + Response rate 回复率
+      + Cost per conversion 每次转换的费用
+      + Conversion Rate 转化率
+    + Direct mail 直邮
+      + Delivery rate 送达率
+      + Open Rate 打开率
+      + Response rate 回复率
+      + Click Through Rate 点击率
+      + Conversion Rate 转化率
+    + Trade shows and other events 贸易展览和其他活动
+      + Registration 注册
+      + Attendees 与会者
+      + Satisfaction 满意
+    + Public/media relations 公共/媒体关系
+      + News releases 新闻发布
+      + Journalist inquiries 记者询问
+      + Interviews 采访
+      + Pickups/coverage 捕捉/报导
+      + Positive mentions 正面的情绪
+      + Endorsements by journalists/influencers 记者/影响者的认可
+      + SOV Share of voice 广告占有率
+  + Digital marketing 数字营销
+    + Website and blog 网站和博客
+      + Search engine optimization effectiveness 搜索引擎优化的有效性
+      + Pay per click advertising efficiency 点击付费广告效果
+        + Impressions 收视次数
+        + Cost per click 每次点击费用
+        + Cost per conversion 每次转化费用
+      + User sessions 用户会话
+    + Webinars 网络研讨会
+      + Attendee rate 参加者率
+      + Drop-off rate 退出率
+      + Engagement rate 参与率
+      + Conversion rate 兑换率
+    + Social media 社交媒体
+      + Connections 连接
+
 + RECOMMENDATION 建议
 
 投资持续入驻营销。  
@@ -92,8 +134,27 @@
  + 社交媒体营销优化
 
 ## ACT 行动
+
+在这个阶段，就是要说服潜在客户开始与品牌互动，并开始做出购买决定。
 鼓励品牌。  
-互动和leads销售线索。  
+互动和leads销售线索。
+
++ KPIs
+  + Analog marketing 模拟营销
+    + Inbound phone calls 呼入电话
+  + Digital marketing 数字营销
+    + Website and blog 网站和博客
+      + Subscribers 认购
+      + Backlinks 付费链接
+      + Time on site 网站停留时间
+    + Social media 社交媒体
+      + Engagement: likes, shares, retweets, comments, etc. 参与：喜欢，分享，转发，评论等
+      + Sentiment 情绪
+      + Conversions 转换
+    + Leads 销售线索
+      + Quality 质量
+      + Conversions 转换
+
 + RECOMMENDATION 建议
 
 开发内容营销策略。  
