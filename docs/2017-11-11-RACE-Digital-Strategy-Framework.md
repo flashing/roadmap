@@ -60,7 +60,7 @@ engage||参与
 * Reach到达：通过整合付费，拥有和获得的媒体来构建受众群体
 * Act行动：使用内容营销和说服来促进品牌互动和引导
 * Convert转变：使用转化率优化来提高线上和线下销售额
-* Engage结合：提高客户忠诚度并重复销售
+* Engage参与：提高客户忠诚度并重复销售
 * 使用SOSTAC策划：TODO
 
 ## REACH 到达
@@ -327,3 +327,7 @@ Act是Interact的缩写。 这是一个单独的转换阶段，因为鼓励在�
 * 在网页和移动网站上实施或优化个性化规则
 * 客户入职，包括事件触发的个性化电子邮件和电子快讯
 * 管理社交媒体和电子邮件活动，以进行客户参与和倡导
+
+## Reference
+[digital marketing plan template](https://www.smartinsights.com/guides/digital-marketing-plan-template/)
+[An example of setting up a Marketing Dashboard with actionable KPIs](https://www.smartinsights.com/goal-setting-evaluation/goals-kpis/marketing-dashboard-example-aa08/)
