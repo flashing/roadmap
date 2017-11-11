@@ -330,4 +330,5 @@ Act是Interact的缩写。 这是一个单独的转换阶段，因为鼓励在�
 
 ## Reference
 [digital marketing plan template](https://www.smartinsights.com/guides/digital-marketing-plan-template/)
+
 [An example of setting up a Marketing Dashboard with actionable KPIs](https://www.smartinsights.com/goal-setting-evaluation/goals-kpis/marketing-dashboard-example-aa08/)
