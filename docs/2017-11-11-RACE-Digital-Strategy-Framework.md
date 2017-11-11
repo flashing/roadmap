@@ -1,7 +1,3 @@
----
-layout: post
-title: RACE Digital Strategy Framework
----
 # RACE Digital Strategy Framework RACE数字营销战略框架
 ![RACE](http://7xjra3.com1.z0.glb.clouddn.com/digital-marketing-plan-template-smart-insights.png?imageView2/0/format/webp/q/75|imageslim)
 建立敏捷的数字营销战略方法，制定详细的数字营销计划，为每个主要市场/命题定义数字渠道战略，为未来提供重点和方向。
@@ -27,13 +23,13 @@ title: RACE Digital Strategy Framework
 
 审查市场和设定目标。  
 从以下关键活动开始，通过市场分析来确定digital opportunity数位机会：
- + 评审当前digital marketing capabilities数字营销能力
- + 使用KPI dashboards关键绩效指标仪表盘为业务定制分析
- + 总结客户的customer personas客户角色和customer journey map(CJM)客户旅程地图
- + 审核品牌和competitor benchmarking竞争标杆管理
- + 审查influencer outreach影响外展，co-marketing合作营销和intermediaries营销中介
- + SLEPT因素评审
- + 通过转换电子表格模型来定义机会，定义SMART objectivesSMART目标
+  + 评审当前digital marketing capabilities数字营销能力
+  + 使用KPI dashboards关键绩效指标仪表盘为业务定制分析
+  + 总结客户的customer personas客户角色和customer journey map(CJM)客户旅程地图
+  + 审核品牌和competitor benchmarking竞争标杆管理
+  + 审查influencer outreach影响外展，co-marketing合作营销和intermediaries营销中介
+  + SLEPT因素评审
+  + 通过转换电子表格模型来定义机会，定义SMART objectivesSMART目标
  
 + STRATEGY 策略
 
