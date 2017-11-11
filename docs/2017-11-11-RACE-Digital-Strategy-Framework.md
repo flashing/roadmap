@@ -286,8 +286,8 @@ Act是Interact的缩写。 这是一个单独的转换阶段，因为鼓励在�
     * Customer advocacy 客户宣传
   * Orders 订单
     * Revenue from repeat purchases 重复购买的收入
-* ROI
-  * All marketing campaigns and initiatives 所有的营销活动和计划
+* ROI 投资回报率
+  * All marketing campaigns and initiatives 所有的营销活动和计划
   * Customer lifetime value 顾客终身价值
 
 ### RECOMMENDATION 建议
