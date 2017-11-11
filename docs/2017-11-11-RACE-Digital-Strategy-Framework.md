@@ -4,6 +4,8 @@ title: RACE Digital Strategy Framework
 ---
 # RACE Digital Strategy Framework RACE数字战略框架
 ![RACE](http://7xjra3.com1.z0.glb.clouddn.com/digital-marketing-plan-template-smart-insights.png?imageView2/0/format/webp/q/75|imageslim)
+建立敏捷的数字营销战略方法，制定详细的数字营销计划，为每个主要市场/命题定义数字渠道战略，为未来提供重点和方向。
+确保数字计划与所有市场营销沟通良好结合，并与业务目标保持一致。
 ## 名词解释
 |名词|全拼|解释|
 |-|-|-|
