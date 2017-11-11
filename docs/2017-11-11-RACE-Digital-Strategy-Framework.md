@@ -8,7 +8,7 @@
 |reach||到达|
 |act||行动|
 |convert||转变|
-|engage||结合|
+|engage||参与|
 
 ## PLAN 计划
   创建一个数字营销策略
@@ -60,13 +60,10 @@
       + Impressions 收视次数
       + Response rate 回复率
       + Cost per conversion 每次转换的费用
-      + Conversion Rate 转化率
     + Direct mail 直邮
       + Delivery rate 送达率
-      + Open Rate 打开率
-      + Response rate 回复率
-      + Click Through Rate 点击率
-      + Conversion Rate 转化率
+      + Response rate 回复率
+      + Cost per conversion 每次转换的费用
     + Trade shows and other events 贸易展览和其他活动
       + Registration 注册
       + Attendees 与会者
@@ -188,7 +185,20 @@ Act是Interact的缩写。 这是一个单独的转换阶段，因为鼓励在�
  + 改进landing pages着陆页和网站页面模板。 个性化的onboarding用户引导
 
 ## CONVERT 转变
+在这个阶段，潜在客户将成为销售线索。
 通过CRO（转化率优化）增加销量。
+
++ KPIs
+  + Digital marketing 数字营销
+    + Website and blog 网站和博客
+      + Return visitors 返回访客
+      + E-commerce transactions 电子商务交易
+    + Leads 销售线索
+      + Cost per lead 每个的成本
+    + Orders 订单
+      + Revenue from purchases 购买收入
+      + Average order value 平均订单价值
+
 + RECOMMENDATION 建议
 
 设置一个CRO（转化率优化）程序。 许多企业仍然不会投资于结构化测试来优化他们的网站，以最大化在线销售或转介到其他渠道。 不要漏掉客户。
@@ -219,8 +229,26 @@ Act是Interact的缩写。 这是一个单独的转换阶段，因为鼓励在�
  + 使用网站个性化，显示重定向和行为电子邮件程序来实施潜在客户重定向计划
  + 优化ROPO行为（Research Online-Purchase Offline）
 
-## ENGAGE 结合
+## ENGAGE 参与
+在这个阶段，重点应该是创造回头客户，并利用与这些客户的关系。
 建立客户忠诚和支持。
+
++ KPIs
+  + Digital marketing 数字营销
+    + Website and blog 网站和博客
+      + E-mail 返回访客
+        + Open rate 打开率
+        + Click-through rate 点击率
+        + Bounce rate 跳出率
+        + Unsubscribe rate 取消订阅率
+    + Social media 社交媒体
+      + Customer advocacy 客户宣传
+    + Orders 订单
+      + Revenue from repeat purchases 重复购买的收入
+  + ROI
+    + All marketing campaigns and initiatives 所有的营销活动和计划
+    + Customer lifetime value 顾客终身价值
+
 + RECOMMENDATION 建议
 
 创建一个客户生命周期通信计划。  
